@@ -15,6 +15,7 @@
         <module>cloud-consumer-order</module>
         <module>clocloud-eureka-server</module>
         <module>cloud-eureka-two-server</module>
+        <module>cloud-provide-two-payment</module>
     </modules>
 
     <properties>
