@@ -14,6 +14,7 @@
         <module>cloud-api-common</module>
         <module>cloud-consumer-order</module>
         <module>clocloud-eureka-server</module>
+        <module>cloud-eureka-two-server</module>
     </modules>
 
     <properties>
