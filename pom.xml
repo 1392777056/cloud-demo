@@ -13,6 +13,7 @@
         <module>cloud-provider-payment</module>
         <module>cloud-api-common</module>
         <module>cloud-consumer-order</module>
+        <module>clocloud-eureka-server</module>
     </modules>
 
     <properties>
