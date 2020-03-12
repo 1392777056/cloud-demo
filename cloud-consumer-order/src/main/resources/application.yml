@@ -13,3 +13,7 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://cloud7001.com:7001/eureka/,http://cloud7002.com:7002/eureka/
+  instance:
+    instance-id: consumer80
+    #访问路径可以显示ip地址
+    prefer-ip-address: true
