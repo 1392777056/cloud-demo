@@ -3,10 +3,14 @@ package com.dzcloud.payment.controller;
 import com.dzcloud.payment.common.CommonRepo;
 import com.dzcloud.payment.entity.Payment;
 import com.dzcloud.payment.service.PaymentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author DeZhe
@@ -14,6 +18,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("pay")
+@Slf4j
 public class PaymentController {
 
     @Resource
@@ -21,6 +26,9 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String port;
+
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @PostMapping("/save")
     public CommonRepo create(@RequestBody Payment payment){
@@ -40,5 +48,22 @@ public class PaymentController {
         return new CommonRepo(200,"查找成功"+port,payment);
     }
 
+
+    @GetMapping("findService")
+    public Object getService(){
+        List<String> services = discoveryClient.getServices();
+        log.info("微服务中的所有service");
+        for (String service : services) {
+            System.out.println(service);
+        }
+
+        System.out.println("=============");
+        log.info("service下面的各种实例");
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PROVIDER-PAYMENT");
+        for (ServiceInstance instance : instances) {
+            System.out.println(instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
+        }
+        return this.discoveryClient.getServices();
+    }
 
 }
