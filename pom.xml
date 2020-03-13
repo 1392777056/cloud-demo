@@ -16,6 +16,8 @@
         <module>clocloud-eureka-server</module>
         <module>cloud-eureka-two-server</module>
         <module>cloud-provide-two-payment</module>
+        <module>cloud-zookeeper-server</module>
+        <module>cloud-zk-consumer-server</module>
     </modules>
 
     <properties>
