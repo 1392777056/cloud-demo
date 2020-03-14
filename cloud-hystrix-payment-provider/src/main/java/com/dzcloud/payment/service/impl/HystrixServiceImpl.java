@@ -19,19 +19,19 @@ public class HystrixServiceImpl implements HystrixService {
         return "正确返回："+Thread.currentThread().getName()+"\t"+"----";
     }
 
-    @HystrixCommand(fallbackMethod = "strTimeOutHandle",
+    /*@HystrixCommand(fallbackMethod = "strTimeOutHandle",
         commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "2000")
         }
-    )
+    )*/
     @Override
     public String strTimeOut() {
         //int i = 10/0;
-        /*try {
+        try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
         return "超时返回："+Thread.currentThread().getName()+"\t"+"----"+"超时等待了3秒";
     }
 
