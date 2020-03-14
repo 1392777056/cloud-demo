@@ -10,3 +10,12 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://cloud7001.com:7001/eureka/,http://cloud7002.com:7002/eureka/
+ribbon:
+  #指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间
+  ReadTimeout: 5000
+  #指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    com.dzcloud.payment.service.PayMentService: debug

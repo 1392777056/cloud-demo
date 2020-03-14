@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author DeZhe
@@ -27,6 +28,12 @@ public class PaymentController {
 
     @GetMapping("/str")
     public String getStr(){
+        /* openfeign超时演示 */
+        /*try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
         Payment payment = this.paymentService.findById((long) 6);
         log.info("======"+payment.toString());
         return port+"==ffffff==="+ UUID.randomUUID().toString();
