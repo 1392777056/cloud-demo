@@ -20,6 +20,7 @@
         <module>cloud-zk-consumer-server</module>
         <module>cloud-consul-server</module>
         <module>cloud-consul-consumer</module>
+        <module>cloud-comsumer-order-openfeign</module>
     </modules>
 
     <properties>

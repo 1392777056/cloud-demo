@@ -3,10 +3,12 @@ package com.dzcloud.payment.controller;
 import com.dzcloud.payment.common.CommonRepo;
 import com.dzcloud.payment.entity.Payment;
 import com.dzcloud.payment.service.PaymentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 
 /**
  * @author DeZhe
@@ -14,6 +16,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("pay")
+@Slf4j
 public class PaymentController {
 
     @Resource
@@ -21,6 +24,13 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String port;
+
+    @GetMapping("/str")
+    public String getStr(){
+        Payment payment = this.paymentService.findById((long) 6);
+        log.info("======"+payment.toString());
+        return port+"==ffffff==="+ UUID.randomUUID().toString();
+    }
 
     @PostMapping("/save")
     public CommonRepo create(@RequestBody Payment payment){

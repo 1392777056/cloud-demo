@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author DeZhe
@@ -30,6 +31,13 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    @GetMapping("/str")
+    public String getStr(){
+        Payment payment = this.paymentService.findById((long) 6);
+        log.info("======"+payment.toString());
+        return port+"==ffffff==="+UUID.randomUUID().toString();
+    }
+
     @PostMapping("/save")
     public CommonRepo create(@RequestBody Payment payment){
         int flag = this.paymentService.create(payment);
@@ -40,7 +48,7 @@ public class PaymentController {
     }
 
     @GetMapping("/findById/{id}")
-    public CommonRepo create(@PathVariable("id") Long id){
+    public CommonRepo findall(@PathVariable("id") Long id){
         Payment payment = this.paymentService.findById(id);
         if (payment == null){
             return new CommonRepo(404,"查找失败",null);
