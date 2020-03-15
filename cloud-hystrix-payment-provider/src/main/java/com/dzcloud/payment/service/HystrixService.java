@@ -18,4 +18,9 @@ public interface HystrixService {
      */
     String strTimeOut();
 
+    /**
+     * 服务熔断演示
+     */
+    String strById(String id);
+
 }
