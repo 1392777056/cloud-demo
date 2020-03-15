@@ -23,6 +23,7 @@
         <module>cloud-comsumer-order-openfeign</module>
         <module>cloud-hystrix-payment-provider</module>
         <module>cloud-hystrix-consumer</module>
+        <module>cloud-hystrix-dashboard</module>
     </modules>
 
     <properties>

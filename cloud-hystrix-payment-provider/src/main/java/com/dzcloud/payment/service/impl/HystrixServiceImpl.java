@@ -50,10 +50,6 @@ public class HystrixServiceImpl implements HystrixService {
             @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "10"), //请求次数
             @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "10000"), //时间窗口期
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "60"), //失败率达到后跳闸
-
-
-
-
         }
     )
     @Override
