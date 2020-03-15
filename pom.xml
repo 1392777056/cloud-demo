@@ -24,6 +24,7 @@
         <module>cloud-hystrix-payment-provider</module>
         <module>cloud-hystrix-consumer</module>
         <module>cloud-hystrix-dashboard</module>
+        <module>cloud-gateway-server</module>
     </modules>
 
     <properties>
