@@ -6,10 +6,14 @@ spring:
     name: getway-service-name
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路径的功能，利用微服务名进行路由
       routes:
-        - id: pay_routh          #路由的id,没有固定规则但要求唯一，建议配合服务名
-          uri: http://127.0.0.1:8008   #匹配后提供服务路由地址
-          predicates:
+          - id: pay_routh          #路由的id,没有固定规则但要求唯一，建议配合服务名
+            # uri: http://127.0.0.1:8008   #匹配后提供服务路由地址
+            uri: lb://dzcloud-hystrix-service     #实现动态路由     不写死
+            predicates:
             - Path=/hystrix/**       #断言，路径相匹配的进行路由
 
 
