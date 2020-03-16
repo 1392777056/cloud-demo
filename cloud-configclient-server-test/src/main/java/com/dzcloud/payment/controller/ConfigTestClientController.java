@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("configclient")
 @RefreshScope
-public class ConfigClientController {
+public class ConfigTestClientController {
 
     @Value("${dezhe.info}")
     private String info;

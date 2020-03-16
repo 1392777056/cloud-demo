@@ -27,6 +27,7 @@
         <module>cloud-gateway-server</module>
         <module>cloud-configcenter-server</module>
         <module>cloud-configclient-server</module>
+        <module>cloud-configclient-server-test</module>
     </modules>
 
     <properties>

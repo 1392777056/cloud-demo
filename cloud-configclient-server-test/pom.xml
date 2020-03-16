@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-configclient-server</artifactId>
-
+    <artifactId>cloud-configclient-server-test</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
