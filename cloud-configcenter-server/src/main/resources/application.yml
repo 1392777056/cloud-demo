@@ -1,0 +1,27 @@
+server:
+  port: 8012
+
+spring:
+  application:
+    name: dzcloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          #gitHub仓库git的名字
+          uri: https://github.com/1392777056/cloud-configcenter-server.git
+          username: 1392777056@qq.com
+          password: Zhang731228..
+          #搜索目录
+          search-paths:
+            - cloud-configcenter-server
+      label: master #读取分支
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://cloud7001.com:7001/eureka/
+  instance:
+    instance-id: config8012
+    prefer-ip-address: true
