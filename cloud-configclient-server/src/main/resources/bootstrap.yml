@@ -13,6 +13,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://cloud7001.com:7001/eureka/
+#暴露监控端点
 management:
   endpoints:
     web:
