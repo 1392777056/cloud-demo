@@ -28,6 +28,7 @@
         <module>cloud-configcenter-server</module>
         <module>cloud-configclient-server</module>
         <module>cloud-configclient-server-test</module>
+        <module>cloud-stream-rabbitmq-provider</module>
     </modules>
 
     <properties>

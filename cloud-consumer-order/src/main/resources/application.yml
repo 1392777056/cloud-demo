@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: cloud-consumer-order
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    sleuth:
+      sampler:
+        #采样值 介于 0 到1 之间    1则表示全部采集
+      probability: 1
 
 eureka:
   client:
