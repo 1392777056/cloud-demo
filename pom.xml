@@ -32,6 +32,7 @@
         <module>alibabacloud-nacos-provider-client</module>
         <module>alibabacloud-nacos-providertwo-client</module>
         <module>alibabacloud-nacos-consumer-client</module>
+        <module>alibabacloud-nacos-config</module>
     </modules>
 
     <properties>
