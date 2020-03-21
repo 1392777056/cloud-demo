@@ -29,6 +29,8 @@
         <module>cloud-configclient-server</module>
         <module>cloud-configclient-server-test</module>
         <module>cloud-stream-rabbitmq-provider</module>
+        <module>alibabacloud-nacos-provider-client</module>
+        <module>alibabacloud-nacos-providertwo-client</module>
     </modules>
 
     <properties>
