@@ -33,6 +33,7 @@
         <module>alibabacloud-nacos-providertwo-client</module>
         <module>alibabacloud-nacos-consumer-client</module>
         <module>alibabacloud-nacos-config</module>
+        <module>alibabacloud-sentinel-demo</module>
     </modules>
 
     <properties>
